@@ -27,6 +27,28 @@
 
       }
     </style>
+    <link 
+      rel="stylesheet" 
+      href="https://unpkg.com/swiper/swiper-bundle.min.css" 
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var mySwiper = new Swiper('.home-slider', {
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          autoplay: {
+            delay: 5000, // Adjust the delay as needed
+          },
+        });
+      });
+    </script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/animate.css@4.1.1/animate.css"
@@ -108,7 +130,7 @@
             data-thq="slider"
             data-pagination="true"
             data-navigation="true"
-            data-autoplay="false"
+            data-autoplay="true"
             class="home-slider swiper"
           >
             <div data-thq="slider-wrapper" class="swiper-wrapper">
@@ -124,7 +146,7 @@
                 data-thq="slider-slide"
                 class="home-slider-slide2 swiper-slide"
               ></div>
-            </div>
+            </div> 
             <div
               data-thq="slider-pagination"
               class="home-slider-pagination swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal"
